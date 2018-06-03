@@ -8,7 +8,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectVersion>4.1</ProjectVersion>
     <ProjectGuid>{9899c89f-c261-49b2-a6d0-1b34bc79a3bf}</ProjectGuid>
-    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.SqlAzureV12DatabaseSchemaProvider</DSP>
     <OutputType>Database</OutputType>
     <RootPath>
     </RootPath>
@@ -60,5 +60,8 @@
   </ItemGroup>
   <ItemGroup>
     <Build Include="Products.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PrDC.Products.DB.publish.xml" />
   </ItemGroup>
 </Project>
