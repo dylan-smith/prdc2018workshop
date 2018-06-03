@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrDC.Products.Web", "PrDC.Products.Web\PrDC.Products.Web.csproj", "{6E6B861A-1C51-40B0-A0F6-AFC19333660F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrDC.Products.Web", "PrDC.Products.Web\PrDC.Products.Web.csproj", "{6E6B861A-1C51-40B0-A0F6-AFC19333660F}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "PrDC.Products.DB", "PrDC.Products.DB\PrDC.Products.DB.sqlproj", "{9899C89F-C261-49B2-A6D0-1B34BC79A3BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,12 @@ Global
 		{6E6B861A-1C51-40B0-A0F6-AFC19333660F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E6B861A-1C51-40B0-A0F6-AFC19333660F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E6B861A-1C51-40B0-A0F6-AFC19333660F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9899C89F-C261-49B2-A6D0-1B34BC79A3BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9899C89F-C261-49B2-A6D0-1B34BC79A3BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9899C89F-C261-49B2-A6D0-1B34BC79A3BF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9899C89F-C261-49B2-A6D0-1B34BC79A3BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9899C89F-C261-49B2-A6D0-1B34BC79A3BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9899C89F-C261-49B2-A6D0-1B34BC79A3BF}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
