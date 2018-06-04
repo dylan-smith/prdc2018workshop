@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: products-$$Release.EnvironmentName$$
+  labels:
+    app: products
+    environment: $$Release.EnvironmentName$$
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: products
+      environment: $$Release.EnvironmentName$$
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+  minReadySeconds: 5
+  template:
+    metadata:
+      labels:
+        app: products
+        environment: $$Release.EnvironmentName$$
+    spec:
+      containers:
+      - name: productservice
+        image: REGISTRY/CONTAINERNAME:$$Build.BuildId$$
+        imagePullPolicy: Always
+        env:
+        - name: ConnectionStrings__ProductsContext
+          value: "$$DBConnectionString$$"
+        ports:
+        - containerPort: 80
+      imagePullSecrets:
+        - name: registrysecret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: products-$$Release.EnvironmentName$$
+  labels:
+    app: products
+    environment: $$Release.EnvironmentName$$
+spec:
+  selector:
+    app: products
+    environment: $$Release.EnvironmentName$$
+  ports:
+  - port: 80
+  type: LoadBalancer

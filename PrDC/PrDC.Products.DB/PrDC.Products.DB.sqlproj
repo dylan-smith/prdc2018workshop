@@ -61,7 +61,4 @@
   <ItemGroup>
     <Build Include="Products.sql" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="PrDC.Products.DB.publish.xml" />
-  </ItemGroup>
 </Project>
